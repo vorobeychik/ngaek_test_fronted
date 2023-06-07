@@ -10,4 +10,8 @@ export const TestApi = {
         const res = await api.get(`/test/${id}`)
         return res.data;
     },
+    getTests: async () => {
+        const res = await api.get(`/test`)
+        return res.data;
+    },
 }

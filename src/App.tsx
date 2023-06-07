@@ -1,8 +1,13 @@
+import { HeaderComponent } from './Components/Header';
 import Routes from './routes/Routes'
 
 function App() {
   return (
-   <Routes />
+    <div>
+      <HeaderComponent />
+      <Routes />
+    </div>
+
   );
 }
 

@@ -4,11 +4,12 @@ import { Button, Card, Form, Input } from "antd"
 import { Test } from "../Components/Test"
 import { TestTypes } from "../enums/enums"
 import { TestApi } from "../api/TestApi"
+import { useNavigate } from "react-router-dom"
 
 
 export const TestConstructor = observer(() => {
 
-
+    const navigate = useNavigate();
     const onSelectName = ({ username }: { username: string }) => {
 
         store.setUserName(username);
@@ -72,20 +73,11 @@ export const TestConstructor = observer(() => {
 
         }
         const test = await TestApi.saveTest({ name: store.userName, ...data });
-        store.setTestLink(`http://localhost:3000/test/${test.id}`)
+        navigate('/tests')
 
     }
 
     console.log(store.testLink);
-
-    if (store.testLink) {
-        return (
-            <div>
-                <p>Ссылка на ваш тест </p>
-                <a href={store.testLink}>{store.testLink}</a>
-            </div>
-        )
-    }
 
 
     return (

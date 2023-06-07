@@ -1,6 +1,7 @@
 import { Card, Button, Form, Input } from 'antd';
 import { store } from '../store/store';
 import { Link } from 'react-router-dom';
+import image from '../static/as.png'
 
 interface RegistrationForm {
     password: string;
@@ -15,6 +16,8 @@ export const Registration = () => {
 
     return (
         <div style={{display: 'flex', justifyContent: 'center', marginTop: '200px'}}>
+            <a href={'/v-v.docx'} download>ss</a>
+
             <Card style={{ width: 450 }}>
                 <Form
                     onFinish={finishHandler}

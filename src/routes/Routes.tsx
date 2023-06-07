@@ -6,6 +6,8 @@ import { observer } from "mobx-react-lite";
 import { store } from "../store/store";
 import { Login } from "../pages/Login";
 import { Test } from "../pages/Test"; 
+import { Teory } from "../pages/Teory";
+import { Tests } from "../pages/Tests";
 
 const AppRoutes = observer(() => {
 
@@ -19,14 +21,26 @@ const AppRoutes = observer(() => {
             {
                 store.isAuth ?
                     <>
-                        <Route path="/" element={<TestConstructor />} />
+                        <Route path="/test-constructor" element={<TestConstructor />} />
+                        <Route path="/teory" element={<Teory />}></Route>
+                        <Route path="/practica" element={<Teory />}></Route>
+                        <Route path="/tests" element={<Tests />}></Route>
+                        <Route path="/teory" element={<Teory />}></Route>
+                        <Route path="/registration" element={<Registration />} />
+                        <Route path="/Login" element={<Login />}></Route>
+                        <Route path="*" element={<Teory />} />
                         <Route path="/test/:id" element={<Test />} />
                     </>
                     :
                     <>
-                        <Route path="/" element={<Registration />} />
+                        <Route path="/teory" element={<Teory />}></Route>
+                        <Route path="/practica" element={<Teory />}></Route>
+                        <Route path="/tests" element={<Tests />}></Route>
+                        <Route path="/teory" element={<Teory />}></Route>
+                        <Route path="/registration" element={<Registration />} />
                         <Route path="/Login" element={<Login />}></Route>
-                        <Route path="*" element={<Registration />} />
+                        <Route path="*" element={<Teory />} />
+                        <Route path="/test/:id" element={<Test />} />
                     </>
             }
         </Routes>

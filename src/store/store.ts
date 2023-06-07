@@ -90,7 +90,7 @@ class Store {
     }
 
     setTestResult(testResult: number, testId: number){
-        localStorage.setItem(testId.toString(),testResult.toString() )
+        localStorage.setItem(testId.toString(),testResult.toString())
         this.testResult = testResult;
     }
 }

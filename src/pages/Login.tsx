@@ -43,12 +43,9 @@ export const Login = observer(() => {
                     <div style={{ display: 'flex' }}>
                         <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
                             <Button type="primary" htmlType="submit">
-                                Submit
+                                Войти
                             </Button>
                         </Form.Item>
-                        <Link to="/" style={{ marginLeft: '35px', marginTop: '5px' }}>
-                            Регистрация
-                        </Link>
                     </div>
                 </Form>
             </Card>
