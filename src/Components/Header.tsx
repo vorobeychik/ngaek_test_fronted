@@ -12,15 +12,15 @@ export const HeaderComponent = observer(() => {
 
     const routesNames = [
         {
-            label: 'Теория',
+            label: 'Теоретический',
             route: 'teory'
         },
         {
-            label: 'Практика',
+            label: 'Практический',
             route: 'practica',
         },
         {
-            label: 'Тесты',
+            label: 'Контроль знаний',
             route: 'tests',
         },
         {
